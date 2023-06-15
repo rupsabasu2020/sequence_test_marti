@@ -8,7 +8,7 @@ plt.rcParams["axes.grid"] = True
 
 
 #---- example file for biomechanical knee angles data ----- #
-data= pd.read_csv('/Users/rupsabasu/Documents/DATASETS/Marjolein_2021_april/hip_knee_ankle.csv')  
+data= pd.read_csv('/Users/rupsabasu/Documents/DATASETS/pilot_study/hip_knee_ankle.csv')  
 right_knee_z_values = data.iloc[25000:, 47]   # just removing some initial points and choosing the right cols
 datamat, _ = fs.modified_data_1D(right_knee_z_values, height= 63, num_interpolate= 200) # convert functional data to matrix data 
 point_data = fs.funcMat_to_point(datamat, num_interpolate= 200)   # matrix data to point data  # note that outliers beyond 3-std. are removed 
